@@ -955,7 +955,7 @@ h6 {
 
 }
 
-.order__title {
+.order__title._anim-items {
 	font-weight: 600;
 	font-size: 2.5rem;
 	line-height: 125%;
@@ -964,6 +964,16 @@ h6 {
 
 	text-align: center;
 	max-width: 100%;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.order__title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.4s;
 }
 
 .order__title span {
@@ -971,7 +981,7 @@ h6 {
 	color: #FF0000;
 }
 
-.order__text {
+.order__text._anim-items {
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
@@ -983,6 +993,16 @@ h6 {
 	text-align: center;
 	width: 47%;
 	/* 564px/1200 */
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.order__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.6s;
 }
 
 .order__product-line {
@@ -1022,8 +1042,13 @@ h6 {
 	border-radius: 4px;
 }
 
+.product-line__content-icon {
+	width: 47px;
+	height: 47px;
+	background-image: url(../img/main/product/icon/arrow-red.png);
+}
 
-.product-line__content-item-active {
+.product-line__content-item._active {
 	background: #FF0000;
 	display: flex;
 	padding: 24px 0px;
@@ -1035,8 +1060,15 @@ h6 {
 
 }
 
-.product-line__content-item-active a {
+.product-line__content-item._active a {
 	color: #F6F6F6;
+}
+
+.product-line__content-item._active .product-line__content-icon {
+
+	width: 55px;
+	height: 55px;
+	background-image: url(../img/main/product/icon/arrow-wait.png);
 }
 
 .product-line__content-item a {
@@ -1139,6 +1171,7 @@ h6 {
 	position: absolute;
 	content: "";
 	top: -335px;
+	z-index: -1;
 
 	width: 1400px;
 	height: 0;
@@ -1355,11 +1388,11 @@ h6 {
 		margin-top: 50px;
 	}
 
-	.order__title {
+	.order__title._active {
 		font-size: 30px;
 	}
 
-	.order__text {
+	.order__text._active {
 		font-size: 0.625rem;
 		margin-top: 15px;
 		width: 60%;
@@ -1470,8 +1503,6 @@ h6 {
 .advantages {
 	margin: 128px 0px 0px 0px;
 }
-
-.advantages__container {}
 
 .advantages__title {
 	/*max-width: 35.042735%;
@@ -1752,25 +1783,45 @@ h6 {
 
 }
 
-.skills__title {
+.skills__title._anim-items {
 	max-width: 48.75%;
 	/* 585px/1200 */
 	text-align: center;
 	color: #000000;
 	text-transform: capitalize;
 	margin: 0 auto;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.skills__title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.4s;
 }
 
 .skills__title span {
 	color: #FF0000;
 }
 
-.skills__text {
+.skills__text._anim-items {
 	max-width: 47%;
 	/* 564px/1200 */
 
 	margin: 30px auto 0px;
 	padding: 0px 14px;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.skills__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.6s;
 }
 
 .skills__inner {
@@ -1785,8 +1836,6 @@ h6 {
 	align-items: center;
 
 }
-
-.skills__content {}
 
 .content-corner__left {
 	position: relative;
@@ -2051,11 +2100,11 @@ h6 {
 }
 
 @media (max-width: 767.9808px) {
-	.skills__title {
+	.skills__title._active {
 		max-width: 80.75%;
 	}
 
-	.skills__text {
+	.skills__text._active {
 		max-width: 72%;
 	}
 
@@ -2106,7 +2155,7 @@ h6 {
 		margin-top: 50px;
 	}
 
-	.skills__text {
+	.skills__text._active {
 		max-width: 69%;
 		margin: 17px auto 0px;
 
@@ -2119,12 +2168,22 @@ h6 {
 
 }
 
-.list-products__title {
+.list-products__title._anim-items {
 	max-width: 43.25%;
 	/* 519px/1200 */
 	margin: 0 auto;
 	color: #000000;
 	text-transform: capitalize;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.list-products__title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.4s;
 }
 
 .list-products__title span {
@@ -2132,12 +2191,22 @@ h6 {
 
 }
 
-.list-products__text {
+.list-products__text._anim-items {
 	max-width: 47%;
 	/* 564px/1200 */
 
 	margin: 30px auto 0px;
 	padding: 0px 14px;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.list-products__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.6s;
 }
 
 .list-products__button {
@@ -2218,7 +2287,7 @@ h6 {
 	object-fit: cover;
 }
 
-.slider__item-content {}
+
 
 .slider__item-content-title {
 	width: 178px;
@@ -2332,12 +2401,12 @@ h6 {
 }
 
 @media (max-width: 991.9808px) {
-	.list-products__title {
+	.list-products__title._active {
 		max-width: 60%;
 		text-align: center;
 	}
 
-	.list-products__text {
+	.list-products__text._active {
 		max-width: 60%;
 		margin: 15px auto 0px;
 
@@ -2370,12 +2439,12 @@ h6 {
 
 	}
 
-	.list-products__title {
+	.list-products__title._active {
 		max-width: 80%;
 		text-align: center;
 	}
 
-	.list-products__text {
+	.list-products__text._active {
 		max-width: 90%;
 		margin: 15px auto 0px;
 
@@ -2402,24 +2471,43 @@ h6 {
 	margin: 117px 0px 0px 0px;
 }
 
-.notice__title {
+.notice__title._anim-items {
 	max-width: 56.837607%;
 	/* 665px/1170 */
 	/* 604px/1200 */
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
 
+.notice__title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.4s;
 }
 
 .notice__title span {
 	color: #FF0000;
 }
 
-.notice__text {
+.notice__text._anim-items {
 	margin: 30px 0px 0px 0px;
 	max-width: 47.863248%;
 	/* 560px/1170 */
 	text-align: start;
 	padding-bottom: 0;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0.2s;
 }
+
+.notice__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.6s;
+}
+
 
 .notice__price {
 	margin: 40px 0px 0px 0px;
@@ -2591,13 +2679,13 @@ h6 {
 
 	}
 
-	.notice__title {
+	.notice__title._active {
 		max-width: 80%;
 		margin: 0 auto;
 		text-align: center;
 	}
 
-	.notice__text {
+	.notice__text._active {
 		margin: 30px 0px 0px 0px;
 		max-width: 80%;
 		text-align: center;
@@ -2665,23 +2753,43 @@ h6 {
 	top: 0;
 }
 
-.contact__title {
+.contact__title._anim-items {
 	max-width: 45.230769%;
 	margin: 330px 0px 0px 0px;
 	text-transform: capitalize;
 	color: #EDEDED;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.contact__title._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.4s;
 }
 
 .contact__title span {
 	color: #FF0000;
 }
 
-.contact__text {
+.contact__text._anim-items {
 	max-width: 40.760684%;
 	margin: 30px 0px 0px 0px;
 	text-align: start;
 	padding-bottom: 0;
 	color: #EDEDED;
+
+	transform: translate(0px, 120%);
+	opacity: 0;
+	transition: all 0.8s ease 0s;
+}
+
+.contact__text._active {
+	transform: translate(0px, 0px);
+	opacity: 1;
+	transition: all 0.8s ease 0.6s;
 }
 
 .contact__inner-button {
@@ -2711,7 +2819,7 @@ h6 {
 }
 
 @media (max-width: 991.9808px) {
-	.contact__text {
+	.contact__text._active {
 		max-width: 600px;
 		margin: 25px 0px 0px 0px;
 
@@ -2727,14 +2835,14 @@ h6 {
 
 	}
 
-	.contact__title {
+	.contact__title._active {
 		max-width: 362px;
 		margin: 180px 0px 0px 0px;
 		text-transform: capitalize;
 		color: #EDEDED;
 	}
 
-	.contact__text {
+	.contact__text._active {
 		max-width: 417px;
 		margin: 12px 0px 0px 0px;
 	}
@@ -2755,12 +2863,12 @@ h6 {
 		left: 15px;
 	}
 
-	.contact__title {
+	.contact__title._active {
 		max-width: 311px;
 		margin: 91px 0px 0px 0px;
 	}
 
-	.contact__text {
+	.contact__text._active {
 		max-width: 300px;
 		margin: 7px 0px 0px 0px;
 	}
@@ -2846,7 +2954,12 @@ h6 {
 
 .footer__links-link {
 	margin: 5px 0px 0px 0px;
+	transform: translate(-120%, 0px);
+	transition: all 0.3s ease 0s;
+	opacity: 0;
 }
+
+
 
 .footer__links-link a {
 	font-weight: 400;
@@ -2856,7 +2969,28 @@ h6 {
 	color: #EDEDED;
 }
 
-.footer__letters {}
+.footer__links-item._anim-items._active li {
+	transform: translate(0px, 0px);
+	opacity: 1;
+}
+
+.footer__links-item._anim-items._active li:nth-child(1) {
+	transition: all 0.8s ease 0s;
+}
+
+.footer__links-item._anim-items._active li:nth-child(2) {
+	transition: all 0.8s ease 0.2s;
+}
+
+.footer__links-item._anim-items._active li:nth-child(3) {
+	transition: all 0.8s ease 0.4s;
+}
+
+.footer__links-item._anim-items._active li:nth-child(4) {
+	transition: all 0.8s ease 0.6s;
+}
+
+
 
 .footer__letters-title {
 	font-weight: 600;
